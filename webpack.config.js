@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'), // Output directory
     filename: 'bundle.js', // Output file
+    clean: true, // Clean the output directory before each build
   },
   module: {
     rules: [
@@ -16,6 +17,10 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.css$/, // Apply CSS loader to .css files
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   plugins: [
@@ -25,9 +30,10 @@ module.exports = {
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'), // Serve files from the dist folder
+      directory: path.join(__dirname, 'build'), // Serve files from the build folder
     },
     compress: true,
     port: 3000, // Port for the dev server
+    open: true, // Automatically open the browser
   },
 };
