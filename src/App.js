@@ -98,7 +98,7 @@ function App() {
               Minor in Mathematics (GPA: 3.5) in May 2025.
             </p>
             <p>
-              My passion for programming started with game modding — I created
+              My passion for programming started with game modding. I created
               Sekiro: Resurrection, one of the most popular mods on NexusMods with
               260,000+ downloads and a 5,000+ member community. That experience
               taught me collaboration, problem-solving, and how to manage a large project.
